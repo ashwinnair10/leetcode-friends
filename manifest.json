@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Friends",
+  "description": "Track your LeetCode friends directly inside LeetCode with a live sidebar.",
+  "version": "1.0",
+
+  "permissions": ["storage"],
+
+  "host_permissions": [
+    "https://leetcode.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "icons": {
+    "24": "icons/icon24.png",
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png"
+  }
+}
