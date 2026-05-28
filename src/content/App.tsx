@@ -101,8 +101,18 @@ export default function App() {
   }
 
   useEffect(() => {
-      
+
     loadFriends();
+
+    const interval =
+      setInterval(() => {
+
+        loadFriends();
+
+      }, 60000);
+
+    return () =>
+      clearInterval(interval);
 
   }, []);
 
